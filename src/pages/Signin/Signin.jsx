@@ -23,6 +23,12 @@ const Signin = () => {
       })
   }
 
+  const handleGoogleLogin = () => {
+    googlePopUpSignin()
+    .then(result => setUser(result.user))
+    .catch(err => console.log(err))
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center mb-4">
       <div className="">
@@ -37,7 +43,7 @@ const Signin = () => {
         <div className="">
           <p className="text-center text-slate-500 my-4">or <br /> continue with social media</p>
           <div className="px-8">
-            <button className="btn w-full ">Google</button>
+            <button onClick={handleGoogleLogin} className="btn w-full ">Google</button>
           </div>
         </div>
         
