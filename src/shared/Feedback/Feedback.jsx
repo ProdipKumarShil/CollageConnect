@@ -1,4 +1,3 @@
-import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 
 import feedback from '../../assets/feedback/feedback3.jpg'
