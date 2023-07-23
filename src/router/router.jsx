@@ -6,6 +6,7 @@ import Singnup from "../pages/Signup/Singnup";
 import Signin from "../pages/Signin/Signin";
 import Colleges from "../shared/Colleges/Colleges";
 import SingleCollege from "../pages/SingleCollege/SingleCollege";
+import Admission from "../pages/Admission/Admission";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: '/colleges/:id',
         loader: ({ params }) => fetch(`https://collegeconnect-server.onrender.com/colleges/${params.id}`),
         element: <SingleCollege />
+      },
+      {
+        path: '/admission',
+        element: <Admission />
       }
     ]
   }
