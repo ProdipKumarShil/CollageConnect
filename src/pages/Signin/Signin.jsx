@@ -17,6 +17,7 @@ const Signin = () => {
     emailSignIn(email, password)
       .then(result => {
         setUser(result.user)
+        navigate('/')
       })
       .catch(error => {
         console.log(error)
@@ -25,7 +26,10 @@ const Signin = () => {
 
   const handleGoogleLogin = () => {
     googlePopUpSignin()
-    .then(result => setUser(result.user))
+    .then(result => {
+      setUser(result.user)
+      navigate('/')
+    })
     .catch(err => console.log(err))
   }
 
