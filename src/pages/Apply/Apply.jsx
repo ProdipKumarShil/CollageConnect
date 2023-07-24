@@ -9,13 +9,17 @@ import Swal from "sweetalert2";
 const Apply = () => {
   const college = useLoaderData()
   const {user} = useContext(AuthContext)
-  console.log(college._id)
+  console.log(college)
   const theCollegeId = college._id
+  const theClgImg = college.collegeImage
+  const theAdmissionDate = college.admissionDates
 
   const handleAdmission = e => {
     e.preventDefault()
     const form = e.target
     const collegeId = theCollegeId
+    const collegeImg = theClgImg
+    const admission = theAdmissionDate
     const name = form.name.value
     const college = form.college.value
     const subject = form.subject.value
@@ -25,7 +29,7 @@ const Apply = () => {
     const dob = form.dob.value
     const img = form.img.value
 
-    const admissionData = { collegeId, name, college, subject, email, phone, address, dob, img}
+    const admissionData = { collegeId, collegeImg, admission, name, college, subject, email, phone, address, dob, img}
 
     fetch('https://collegeconnect-server.onrender.com/admission',{
       method: "POST",
