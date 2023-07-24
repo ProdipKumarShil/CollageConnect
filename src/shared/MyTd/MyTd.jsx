@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const MyTd = ({clgName, clgImg, id, date}) => {
   return (
@@ -16,7 +17,7 @@ const MyTd = ({clgName, clgImg, id, date}) => {
         <td>{date}</td>
         <td>5 STAR</td>
         <th>
-          <button className="btn btn-ghost btn-xs">Apply</button>
+          <Link to={`/admission/${id}`} className="btn btn-ghost btn-xs">Apply</Link>
         </th>
       </tr>
     </>

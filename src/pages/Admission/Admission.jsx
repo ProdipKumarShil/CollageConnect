@@ -32,7 +32,7 @@ const Admission = () => {
           <tbody>
             {/* row 1 */}
             {
-              college.map(item => <MyTd clgName={item.collegeName} clgImg={item.collegeImage} date={item.admissionDates[0]} key={item._id} />)
+              college.map(item => <MyTd id={item._id} clgName={item.collegeName} clgImg={item.collegeImage} date={item.admissionDates[0]} key={item._id} />)
             }
             
           </tbody>
