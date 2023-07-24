@@ -18,7 +18,7 @@ const Navbar = () => {
     <li><Link to="/admission">Admission</Link></li>
     <li><Link to={`/myCollege`}>My College</Link></li>
     {!user && <li><Link to="/signin">Sign in</Link></li> }
-    {user && <li><Link to="/profile">Profile</Link></li>}
+    {user && <li><Link to="/profile">{user.displayName}</Link></li>}
     {user && <li ><button onClick={handleSignOut}>Sign out</button></li>}
   </>
   return (

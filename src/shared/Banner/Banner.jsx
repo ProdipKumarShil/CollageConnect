@@ -10,19 +10,15 @@ const Banner = () => {
     <Carousel autoPlay={true} infiniteLoop={true} interval={3000} showThumbs={false} onClickItem={true} swipeable={true}>
       <div>
         <img className="h-[100vh] object-cover" src={img1} />
-        <p className="legend">Legend 1</p>
       </div>
       <div>
         <img className="h-[100vh] object-cover" src={img2} />
-        <p className="legend">Legend 2</p>
       </div>
       <div>
         <img className="h-[100vh] object-cover" src={img3} />
-        <p className="legend">Legend 3</p>
       </div>
       <div>
         <img className="h-[100vh] object-cover" src={img4} />
-        <p className="legend">Legend 4</p>
       </div>
     </Carousel>
   );
