@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 import animation from '../../assets/lottie/Login.json'
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -53,6 +53,7 @@ const Singnup = () => {
           <input name="photo" type="text" placeholder="Photo URL" className="input input-bordered input-info w-full " />
           <input name="email" type="email" placeholder="Email" className="input input-bordered input-info w-full " />
           <input name="password" type="password" placeholder="Password" className="input input-bordered input-info w-full " />
+          <p className="text-center text-slate-500 my-4">Already have an account <Link to='/signin'>sign in</Link></p>
           <button className="btn btn-info w-full">Sign up</button>
         </form>
 

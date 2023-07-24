@@ -2,7 +2,7 @@ import Lottie from "lottie-react";
 import animation from '../../assets/lottie/Login.json'
 import { AuthContext } from "../../provider/AuthProvider";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const { googlePopUpSignin, setUser, emailSignIn } = useContext(AuthContext)
@@ -40,6 +40,7 @@ const Signin = () => {
         <form onSubmit={handleSignin} className="flex flex-col items-center justify-center gap-4 px-8" >
           <input name="email" type="email" placeholder="Email" className="input input-bordered input-info w-full " />
           <input name="password" type="password" placeholder="Password" className="input input-bordered input-info w-full " />
+          <p className="text-center text-slate-500 my-4">Not have an account <Link to='/signup'>Create one</Link></p>
           <button className="btn btn-info w-full">Sign in</button>
         </form>
 
