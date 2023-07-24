@@ -12,8 +12,6 @@ const MyCollege = () => {
       .then(res => res.json())
       .then(data => setColleges(data))
   } , [user.email])
-  console.log(colleges)
-  console.log(user.email)
 
   if(!colleges){
     return <Loader />

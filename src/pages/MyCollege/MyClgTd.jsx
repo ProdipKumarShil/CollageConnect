@@ -18,9 +18,9 @@ const MyClgTd = ({img, name, adDate,  idx}) => {
   const handleFeedback = e => {
     e.preventDefault()
     const feedback = e.target.feedbackTxt.value
-    const feedbackObj = {feedback, name, photo:user.photoURL}
+    const feedbackObj = {feedback, name:user.displayName, photo:user.photoURL}
 
-    fetch('http://localhost:5000/feedback', {
+    fetch('https://collegeconnect-server.onrender.com/feedback', {
       method: "POST",
       headers: {
         "content-type": "application/json"
