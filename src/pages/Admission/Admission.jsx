@@ -1,6 +1,7 @@
 import HeaderWithIMG from "../../shared/HeaderWithIMG/HeaderWithIMG";
 import { useEffect, useState } from "react";
 import MyTd from "../../shared/MyTd/MyTd";
+import Loader from "../../shared/Loader/Loader";
 
 const Admission = () => {
 
@@ -12,7 +13,7 @@ const Admission = () => {
   }, [])
   console.log(college)
   if (!college) {
-    return <h1 className="text-8xl font-extrabold">alkdsfjaoisdf</h1>
+    return <Loader />
   }
   return (
     <div>

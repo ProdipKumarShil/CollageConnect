@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HeaderWithIMG from "../HeaderWithIMG/HeaderWithIMG";
 import CollegeCard from "../CollegeCard/CollegeCard";
+import Loader from "../Loader/Loader";
 
 
 const Colleges = () => {
@@ -13,7 +14,7 @@ const Colleges = () => {
 
   console.log(colleges)
   if(!colleges){
-    return <h1 className="text-8xl font-extrabold">alkdsfjaoisdf</h1>
+    return <Loader />
   }
   return (
     <div>
